@@ -1,0 +1,45 @@
+/////////////
+// App Dev //
+/////////////
+
+// Module: Async programming.
+/////////////////////////////
+
+// EXERCISE 1. Callbacks.
+////////////////////////
+
+// If you need to run some code _after_ some other event in the future, then
+// the easiest solution is to use a callback (often shortened with "cb").
+
+// Modify the code below so that the printNews method is called after
+// all news are fetched inside the timeout.
+
+let printNews = allNews => {
+  allNews.forEach(news => console.log(`- Breaking News: ${news.title}`));
+};
+
+let getLatestNews = () => {
+  // Imagine to connect to a server and getting back the news
+  // with some delay.  
+  setTimeout(() => {
+  
+    let news = [ 
+      {
+        id: 'news1',
+        title: 'Bitcoin price reached 60K!', 
+      },
+      {
+        id: 'news2',
+        title: 'Bitcoin price crashed 20%!'
+      }
+    ];
+    console.log('Got news!');
+    
+    // Some code here.
+    
+  }, 2000);
+};
+
+// Wrong solution: this does not produce the expected result.
+let news = getLatestNews();
+printNews(news);

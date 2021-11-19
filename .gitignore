@@ -1,0 +1,16 @@
+_*
+~*
+*~
+\#*
+.\#*
+
+data/*
+
+*.mp3
+*.ogg
+*.csv
+
+npm-debug.log
+
+node_modules
+test
